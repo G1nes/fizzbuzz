@@ -1,4 +1,4 @@
-package com.solveva.games.domain.fizzbuzz;
+package com.solveva.games.domain.fizzbuzz.numbers;
 
 public class FizzBuzzNumberFactory {
 

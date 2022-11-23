@@ -2,16 +2,16 @@ package com.solveva.games.service.fizzbuzz;
 
 import com.solveva.games.domain.NumericGame;
 import com.solveva.games.domain.fizzbuzz.FizzBuzzGameResult;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-@RequiredArgsConstructor
 public class FizzBuzzServiceImpl implements FizzBuzzService {
 
-    private final NumericGame game;
+    @Autowired
+    private NumericGame game;
 
     @Override
     public List<FizzBuzzGameResult> playGames(int[] numbers) {

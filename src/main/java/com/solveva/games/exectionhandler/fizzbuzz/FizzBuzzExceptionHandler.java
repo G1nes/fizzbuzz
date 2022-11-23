@@ -1,4 +1,4 @@
-package com.solveva.games.exectionHandler.fizzbuzz;
+package com.solveva.games.exectionhandler.fizzbuzz;
 
 import com.solveva.games.domain.fizzbuzz.FizzBuzzBadNumberException;
 import org.springframework.http.*;
