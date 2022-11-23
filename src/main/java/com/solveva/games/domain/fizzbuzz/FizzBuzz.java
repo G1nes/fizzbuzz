@@ -1,6 +1,7 @@
 package com.solveva.games.domain.fizzbuzz;
 
 import com.solveva.games.domain.NumericGame;
+import com.solveva.games.domain.fizzbuzz.numbers.FizzBuzzNumberFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class FizzBuzz implements NumericGame {
         FizzBuzzGameResult gameResult = new FizzBuzzGameResult();
         List<String> result = new ArrayList<>();
         for (int i = 1; i <= number; ++i) {
-            result.add(FizzBuzzNumberFactory.createFizzBuzzNumber(i).print());
+            result.add(FizzBuzzNumberFactory.createFizzBuzzNumber(i).printNumber());
         }
         gameResult.setResult(result);
         return gameResult;
