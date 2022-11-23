@@ -1,20 +1,16 @@
-package com.solveva.games.domain.fizz_buzz;
+package com.solveva.games.domain.fizzbuzz;
 
-import com.solveva.games.domain.Game;
-import lombok.AllArgsConstructor;
-import lombok.Setter;
+import com.solveva.games.domain.NumericGame;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@AllArgsConstructor
-public class FizzBuzz implements Game {
-
-    @Setter
-    private int number;
+@Component
+public class FizzBuzz implements NumericGame {
 
     @Override
-    public FizzBuzzGameResult play() {
+    public FizzBuzzGameResult play(int number) {
         if (number <= 0) {
             throw new FizzBuzzBadNumberException();
         }
@@ -23,14 +19,11 @@ public class FizzBuzz implements Game {
         for (int i = 1; i <= number; ++i) {
             if (i % 15 == 0) {
                 result.add("Fizz Buzz");
-            }
-            else if (i % 3 == 0){
+            } else if (i % 3 == 0) {
                 result.add("Fizz");
-            }
-            else if (i % 5 == 0){
+            } else if (i % 5 == 0) {
                 result.add("Buzz");
-            }
-            else {
+            } else {
                 result.add(String.valueOf(i));
             }
         }

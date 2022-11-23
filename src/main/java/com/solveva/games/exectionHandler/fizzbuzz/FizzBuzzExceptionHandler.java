@@ -1,6 +1,6 @@
-package com.solveva.games.exection_handler.fizz_buzz;
+package com.solveva.games.exectionHandler.fizzbuzz;
 
-import com.solveva.games.domain.fizz_buzz.FizzBuzzBadNumberException;
+import com.solveva.games.domain.fizzbuzz.FizzBuzzBadNumberException;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,13 +10,13 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class FizzBuzzExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = {FizzBuzzBadNumberException.class})
-    protected ResponseEntity<Object> handleNoUsersException(RuntimeException ex,
+    protected ResponseEntity<Object> handleBadNumberException(RuntimeException ex,
                                                             WebRequest request) {
         return handleExceptionInternal(
                 ex,
                 ex.getMessage(),
                 new HttpHeaders(),
-                HttpStatus.INTERNAL_SERVER_ERROR,
+                HttpStatus.BAD_REQUEST,
                 request);
     }
 }
