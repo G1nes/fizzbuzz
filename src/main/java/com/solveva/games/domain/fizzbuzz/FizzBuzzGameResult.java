@@ -1,4 +1,4 @@
-package com.solveva.games.domain.fizz_buzz;
+package com.solveva.games.domain.fizzbuzz;
 
 import lombok.Data;
 
@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class FizzBuzzGameResult {
-    List<String> result;
+    private List<String> result;
 }

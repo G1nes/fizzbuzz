@@ -1,4 +1,4 @@
-package com.solveva.games.controller.fizz_buzz;
+package com.solveva.games.controller.fizzbuzz;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +13,7 @@ public class FizzBuzzResponseDTO {
     @Data
     @AllArgsConstructor
     public static class FizzBuzzResultDTO {
+
         private List<String> result;
     }
 }

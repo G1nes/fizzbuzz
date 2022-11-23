@@ -1,4 +1,4 @@
-package com.solveva.games.domain.fizz_buzz;
+package com.solveva.games.domain.fizzbuzz;
 
 public class FizzBuzzBadNumberException extends RuntimeException{
     private static final String NUMBER_SMALLER_OR_EQUAL_ZERO = "Number should be bigger than 0";
