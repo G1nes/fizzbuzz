@@ -17,15 +17,7 @@ public class FizzBuzz implements NumericGame {
         FizzBuzzGameResult gameResult = new FizzBuzzGameResult();
         List<String> result = new ArrayList<>();
         for (int i = 1; i <= number; ++i) {
-            if (i % 15 == 0) {
-                result.add("Fizz Buzz");
-            } else if (i % 3 == 0) {
-                result.add("Fizz");
-            } else if (i % 5 == 0) {
-                result.add("Buzz");
-            } else {
-                result.add(String.valueOf(i));
-            }
+            result.add(FizzBuzzNumberFactory.createFizzBuzzNumber(i).print());
         }
         gameResult.setResult(result);
         return gameResult;
